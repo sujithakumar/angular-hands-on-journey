@@ -1,19 +1,21 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DataBinding } from '../data-binding/data-binding';
-import { IfDirective } from '../Directives/Structural-Directives/if-directive/if-directive';
-import { ForDirective } from '../Directives/Structural-Directives/for-directive/for-directive';
-import { SwitchDirective } from '../Directives/Structural-Directives/switch-directive/switch-directive';
-import { NgClassDirective } from '../Directives/Attribute-Directives/ng-class-directive/ng-class-directive';
-import { NgStyleDirective } from '../Directives/Attribute-Directives/ng-style-directive/ng-style-directive';
+import { IfDirective } from './directives/Structural-Directives/if-directive/if-directive';
+import { DataBinding } from './data-binding/data-binding';
+import { ForDirective } from './directives/Structural-Directives/for-directive/for-directive';
+import { SwitchDirective } from './directives/Structural-Directives/switch-directive/switch-directive';
+import { NgClassDirective } from './directives/Attribute-Directives/ng-class-directive/ng-class-directive';
+import { NgStyleDirective } from './directives/Attribute-Directives/ng-style-directive/ng-style-directive';
+
 
 @Component({
-  imports: [RouterOutlet, 
+  imports: [
+    RouterOutlet, 
     // IfDirective , 
     // DataBinding, 
     // ForDirective,
     // SwitchDirective,
-    // NgClassDirective
+    NgClassDirective,
     NgStyleDirective
   ],
   selector: 'app-root',
