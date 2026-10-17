@@ -1,0 +1,41 @@
+<div class="container">
+    <h4>[ngClass] - adds classes dynamically</h4>
+    <div>
+        <h5>[ngClass] -
+            <span [class]="textColor" style="font-weight: bold;">Attribute Directive</span>
+        </h5>
+        <h5>[class] -
+            <span [class]="textColor" style="font-weight: bold;">Attribute Directive</span>
+        </h5>
+    </div>
+    <div>
+        <h5>Changing text color on Button click </h5>
+        <p [ngClass]="buttonColor" style="font-weight: bold;">Attribute Directive</p>
+
+        <button class="btn btn-primary m-2" (click)="changeOnButtonClick('success')">Success</button>
+        <button class="btn btn-warning m-2" (click)="changeOnButtonClick('warning')">Warning</button>
+        <button class="btn btn-danger m-2" (click)="changeOnButtonClick('danger')">Danger</button>
+        <button class="btn btn-success m-2" (click)="clear()">Clear</button>
+
+    </div>
+    <div>
+        <h5>Changing text color on Boolean Value </h5>
+        <p [ngClass]="isChecked?'text-primary':'text-danger'" style="font-weight: bold;">
+            Attribute Directive
+        </p>
+        <input type="checkbox" [(ngModel)]="isChecked"> Click to change text color;
+    </div>
+
+    <div>
+        <h5>Changing text color on selectbox Value </h5>
+        <p [ngClass]="selectedValue" style="font-weight: bold;">
+            Attribute Directive
+        </p>
+        <select [(ngModel)]="selectedValue">
+            <option value="text-primary">text-primary</option>
+            <option value="text-success">text-success</option>
+            <option value="text-warning">text-warn</option>
+            <option value="text-danger">text-danger</option>
+        </select>
+    </div>
+</div>

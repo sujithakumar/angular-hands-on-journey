@@ -1,0 +1,29 @@
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style($bg-color, $text-color: #fff) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+
+@mixin default_spacing {
+    margin : 0.25rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+
+}

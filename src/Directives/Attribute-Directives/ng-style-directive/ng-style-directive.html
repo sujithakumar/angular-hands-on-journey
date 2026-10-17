@@ -1,0 +1,45 @@
+<div class="container">
+    <h4>[ngStyle] -Modifies inline styles</h4>
+     <h4 style="text-decoration: underline;">Do not pass class names</h4>
+    <div>
+        <h5>[ngStyle] -
+            <span [ngStyle]="{'color':updateColor, 'font-weight':'bold'}">Attribute Directive</span>
+        </h5>
+        <h5>[style] -
+            <span [style]="{'color':updateColor, 'font-weight':'bold'}">Attribute Directive</span>
+        </h5>
+    </div>
+
+    <div>
+        <h5>Updating text color on Button click </h5>
+        <p [ngStyle]="{'color':buttonColor, 'font-weight':'bold'}">Attribute Directive</p>
+
+        <button class="btn btn-primary m-2" (click)="updateOnButtonClick('blue')">Success</button>
+        <button class="btn btn-warning m-2" (click)="updateOnButtonClick('yellow')">Warning</button>
+        <button class="btn btn-danger m-2" (click)="updateOnButtonClick('red')">Danger</button>
+        <button class="btn btn-success m-2" (click)="clear()">Clear</button>
+
+    </div>
+
+       <div>
+        <h5>Changing text color on Boolean Value </h5>
+        <p [ngStyle]="{'color': isChecked ? 'green' : 'red'}" style="font-weight: bold;">
+            Attribute Directive
+        </p>
+        <input type="checkbox" [(ngModel)]="isChecked"> Click to change text color;
+    </div>
+
+
+     <div>
+        <h5>Changing text color on selectbox Value </h5>
+        <p [ngStyle]="{'color':selectedValue}" style="font-weight: bold;">
+            Attribute Directive
+        </p>
+        <select [(ngModel)]="selectedValue">
+            <option value="green">text-primary</option>
+            <option value="blue">text-success</option>
+            <option value="orange">text-warn</option>
+            <option value="red">text-danger</option>
+        </select>
+    </div>
+</div>

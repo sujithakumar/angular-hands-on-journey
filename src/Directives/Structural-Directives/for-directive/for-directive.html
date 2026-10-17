@@ -1,0 +1,156 @@
+<h3>*ngFor</h3>
+<div class="container">
+    <div>
+        <h4>DIV</h4>
+        <div *ngFor="let x of companies">
+            {{x}}
+        </div>
+    </div>
+
+    <div>
+        <h4>List</h4>
+        <ul>
+            <li *ngFor="let x of companies">{{x}}</li>
+        </ul>
+    </div>
+
+    <div>
+        <h4>Objects</h4>
+        <table class="table table-border">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Mail Id</td>
+                    <td>Position</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employee">
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.age}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.position}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h4>Select box</h4>
+        <select class="p-2">
+            <option *ngFor="let emp of employee">{{emp.name}} ---- {{emp.position}}</option>
+        </select>
+    </div>
+</div>
+<h3>
+    <code>
+            &#64;for
+        </code>
+</h3>
+<div class="container">
+    <div>
+        <h4>DIV</h4>
+        @for(x of companies; track x){
+        <div>
+            {{x}}
+        </div>
+        }
+    </div>
+    <div>
+        <h4>List</h4>
+        <ul>
+            @for(x of companies; track x){
+            <li>{{x}}</li>
+            }
+        </ul>
+    </div>
+
+    <div>
+        <h4>Objects</h4>
+        <table class="table table-border">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Mail Id</td>
+                    <td>Position</td>
+                </tr>
+            </thead>
+            <tbody>
+                @for(emp of employee; track emp){
+                <tr>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.age}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.position}}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h4>Select box</h4>
+        <select class="p-2">
+            @for(emp of employee; track emp){
+            <option>{{emp.name}} ---- {{emp.position}}</option>
+            }
+        </select>
+    </div>
+
+</div>
+
+
+<div class="container">
+    <table class="table" border="1">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Mail Id</td>
+                <td>Position</td>
+            </tr>
+        </thead>
+        <tbody>
+            @for(emp of employee; track emp; let i=$index, c= $count, f=$first, l=$last, e=$even, o=$odd;){
+            @if(f == true){
+            <tr class="first">
+                <td>{{emp.name}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.position}}</td>
+            </tr>
+            }
+            @else if(l == true){
+            <tr class="last">
+                <td>{{emp.name}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.position}}</td>
+            </tr>
+            }
+            @else if(e == true){
+            <tr class="even">
+                <td>{{emp.name}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.position}}</td>
+            </tr>
+            }
+            @else {
+            <tr>
+                <td>{{emp.name}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.position}}</td>
+            </tr>
+            }
+            }
+            @empty{
+            No Data Found
+            }
+        </tbody>
+    </table>
+</div>

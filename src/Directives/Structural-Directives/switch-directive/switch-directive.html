@@ -1,0 +1,58 @@
+<div class="container">
+    <button class="btn btn-success" (click)="setGrade(1)">Grade O</button>
+    <button class="btn btn-primary" (click)="setGrade(2)">Grade A</button>
+    <button class="btn btn-warning" (click)="setGrade(3)">Grade B</button>
+    <button class="btn btn-danger" (click)="setGrade(4)">Grade E</button>
+
+</div>
+
+<div class="container">
+
+    <h3>*ngswitchCase *ngswitchDefault [ngSwitch]</h3>
+
+    <div [ngSwitch]="grades">
+        <p *ngSwitchCase="1">
+            Grade Title : <span>Outstanding</span>
+        </p>
+        <p *ngSwitchCase="2">
+            Grade Title : <span>First-Class</span>
+        </p>
+        <p *ngSwitchCase="3">
+            Grade Title : <span>Second-Class</span>
+        </p>
+        <p *ngSwitchCase="4">
+            Grade Title : <span class="fail">Fail</span>
+        </p>
+        <p *ngSwitchDefault class="noRecord">
+            No Records Found
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <h3>
+        <code>
+            &#64;switch
+        </code>
+    </h3>
+    
+   <p>
+     @switch(grades){
+        @case(1){
+             Grade Title : <span>Outstanding</span>
+        }
+         @case(2){
+             Grade Title : <span>First-Class</span>
+        }
+         @case(3){
+             Grade Title : <span>Second-Class</span>
+        }
+         @case(4){
+             Grade Title : <span  class="fail">Fail</span>
+        }
+        @default{
+            No Records Found
+        }
+    }
+   </p>
+<div>

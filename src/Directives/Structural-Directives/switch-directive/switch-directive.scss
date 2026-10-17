@@ -1,0 +1,29 @@
+@use '../../../styles/mixin' as mixins;
+
+.container {
+    text-align: center;
+    display: block;
+
+    button, p {
+        @include mixins.default_spacing
+    }
+
+    p{
+        font-size: 20px;
+        font-weight: bold;
+        span{
+            color: blueviolet;
+        }
+        span.fail{
+            color: red;
+        }
+    }
+
+    .noRecord{
+        font-size: 20px;
+        font-weight: bold;
+        color: red;
+        text-transform: uppercase;
+    }
+
+}
