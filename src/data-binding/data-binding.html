@@ -1,0 +1,44 @@
+<div class="container">
+    <h2><strong>Data Binding</strong></h2>
+    <ul>
+        <li>One-Way Data Binding</li>
+        <li>
+            <ol>
+                <li>
+                    <h4><strong>Interpolation </strong></h4>
+                    {{topic}} by {{name}}
+                </li>
+                <li>
+                    <h4><strong>Propery Binding </strong></h4>
+                    <p> Input Box: <input type="text" [value]="topic"></p>
+                    <p>
+                        <img [src]="imageURL" width="100" height="100">
+                    </p>
+                </li>
+                <li>
+                    <h4><strong>Event Binding </strong></h4>
+                    <button class="btn btn-primary" (click)="save()">Save me</button>
+                    <br>
+                    <select (change)="changeCountry()">
+                        <option value="Country">Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </li>
+            </ol>
+        </li>
+        <li>Two-Way Data Binding</li>
+        <li>
+            <ol>
+                <li>
+                    <h4><strong>Ng model Binding </strong></h4>
+                    <p>
+                        Input Box: <input type="text" [(ngModel)]="topic">
+                        {{topic}}
+
+                    </p>
+                </li>
+            </ol>
+        </li>
+    </ul>
+</div>

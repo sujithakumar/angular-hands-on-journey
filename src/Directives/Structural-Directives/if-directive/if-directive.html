@@ -1,0 +1,63 @@
+<div class="container">
+    <h3>*ngIf</h3>
+    <div>
+        <input type="checkbox" (click)="checked()">&nbsp;Terms and Conditions
+        <br><br>
+        <button class="btn btn-success" *ngIf="isChecked">Save</button>
+    </div>
+
+    <div>
+        <input type="text" value="Directives" *ngIf="showORhide">
+        <br><br>
+        <button class="btn btn-success" (click)="showText()">Show</button>
+        <button class="btn btn-danger" (click)="hideText()">Hide</button>
+    </div>
+
+    <div>
+        <input type="text" [(ngModel)]="inp1">
+        <br>
+        <input type="text" [(ngModel)]="inp2">
+        <br><br>
+        <p *ngIf="inp1 === inp2">Same Input</p>
+        <p *ngIf="inp1 !== inp2">Different input</p>
+    </div>
+</div>
+<div class="container">
+    <h3>
+        <code>
+            @If
+        </code>
+    </h3>
+    <div>
+        <input type="checkbox" (click)="checked()">&nbsp;Terms and Conditions
+        <br><br>
+        @if(isChecked){
+        <button class="btn btn-success">Save</button>
+        }
+
+    </div>
+
+    <div>
+        @if(showORhide){
+        <input type="text" value="Directives">
+        }
+        <br><br>
+        <button class="btn btn-success" (click)="showText()">Show</button>
+        <button class="btn btn-danger" (click)="hideText()">Hide</button>
+    </div>
+
+    <div>
+        <input type="text" [(ngModel)]="inp1">
+        <br>
+        <input type="text" [(ngModel)]="inp2">
+        <br>
+        <br>
+        @if(inp1 === inp2){
+            <p>Same Input</p>
+        }@else if(inp1 !== inp2){
+             <p>Diff Input</p>
+        }
+
+      
+    </div>
+</div>
