@@ -15,11 +15,13 @@
         padding: 5px;
     }
 
-
-
 }
 
-h3 {
+.borders{
+    border: 3px solid aqua;
+}
+
+h3, .borders {
     @include mixins.default_spacing();
 }
 
