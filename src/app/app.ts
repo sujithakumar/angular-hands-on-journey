@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, linkedSignal, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IfDirective } from './directives/Structural-Directives/if-directive/if-directive';
 import { DataBinding } from './data-binding/data-binding';
@@ -6,6 +6,8 @@ import { ForDirective } from './directives/Structural-Directives/for-directive/f
 import { SwitchDirective } from './directives/Structural-Directives/switch-directive/switch-directive';
 import { NgClassDirective } from './directives/Attribute-Directives/ng-class-directive/ng-class-directive';
 import { NgStyleDirective } from './directives/Attribute-Directives/ng-style-directive/ng-style-directive';
+import { Signals } from './signals/signals';
+import { LinkedSignals } from './signals/linked-signals/linked-signals';
 
 
 @Component({
@@ -15,8 +17,10 @@ import { NgStyleDirective } from './directives/Attribute-Directives/ng-style-dir
     // DataBinding, 
     // ForDirective,
     // SwitchDirective,
-    NgClassDirective,
-    NgStyleDirective
+    // NgClassDirective,
+    // NgStyleDirective,
+    Signals,
+    LinkedSignals
   ],
   selector: 'app-root',
   styleUrl: './app.scss',

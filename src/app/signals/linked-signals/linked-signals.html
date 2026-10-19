@@ -1,0 +1,17 @@
+<div class="container">
+    <h3>Shopping Cart</h3>
+
+    <div>
+        <p>Product price: ₹{{ price() }}</p>
+
+        <label>Quantity:</label>
+        
+        <input type="number" [value]="quantity()" 
+        (input)="quantity.set(+$any($event.target).value)" 
+        />
+
+        <p>Total: ₹{{ total() }}</p>
+
+    </div>
+    <button (click)="changeProduct()">Change Product</button>
+</div>

@@ -1,0 +1,32 @@
+<div class='container'>
+
+    <div>
+        <button class="btn btn-primary" (click)="increment()">Increment</button>
+        <p>
+            Counter value = {{numberSignal()}}
+            <br>
+            Normal value = {{normalVariable}}
+            <br>
+            Actual signal = {{count()}}
+            <br>
+            computed signal = {{doubleCount()}}
+        </p>
+    </div>
+
+    <div>
+        <h4>Reading and Writing signals</h4>
+        <br>
+        <p>
+            User Name => {{userName()}}
+        </p>
+        <br>
+        <p>
+            <strong> Enter User name:</strong>
+            <br>
+            <input type="text" 
+            [value]="userName()"
+            (keyup)="updateUserName($event)"
+            >
+        </p>
+    </div>
+</div>
