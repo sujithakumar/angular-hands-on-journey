@@ -1,15 +1,52 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" routerLink="/">
+                <i class="bi bi-code-slash text-warning me-2"></i>Angular Playground
+            </a>
 
-<!-- <app-data-binding></app-data-binding> -->
-<!-- <app-if-directive></app-if-directive> -->
-<!-- <app-for-directive></app-for-directive> -->
-<!-- <app-switch-directive></app-switch-directive> -->
-<!-- <app-ng-class-directive></app-ng-class-directive> -->
-<!-- <app-ng-style-directive></app-ng-style-directive> -->
- <app-signals></app-signals>
-<app-linked-signals></app-linked-signals>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
 
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/login" routerLinkActive="active">
+                           Login
+                        </a>
+                    </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/binding" routerLinkActive="active">
+                            Data Binding
+                        </a>
+                    </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/signal" routerLinkActive="active">
+                            Signals
+                        </a>
+                    </li>
 
- <router-outlet />
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/NgStyle-directive" routerLinkActive="active">
+                            NgStyle 
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/NgSwitch-Directive" routerLinkActive="active">
+                            NgSwitch 
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>
