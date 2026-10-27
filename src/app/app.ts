@@ -1,5 +1,5 @@
 import { Component, linkedSignal, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { IfDirective } from './directives/Structural-Directives/if-directive/if-directive';
 import { DataBinding } from './data-binding/data-binding';
 import { ForDirective } from './directives/Structural-Directives/for-directive/for-directive';
@@ -12,15 +12,15 @@ import { LinkedSignals } from './signals/linked-signals/linked-signals';
 
 @Component({
   imports: [
-    RouterOutlet, 
+    RouterOutlet, RouterLink,
     // IfDirective , 
     // DataBinding, 
     // ForDirective,
     // SwitchDirective,
     // NgClassDirective,
     // NgStyleDirective,
-    Signals,
-    LinkedSignals
+    // Signals,
+    // LinkedSignals,
   ],
   selector: 'app-root',
   styleUrl: './app.scss',
