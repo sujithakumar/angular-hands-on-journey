@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class User {
 
   constructor(private route: Router) {
-
+    console.log("Constructor is used to initialize variables")
   }
 
 

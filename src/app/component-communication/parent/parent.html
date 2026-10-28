@@ -1,0 +1,29 @@
+<div class="container">
+    <div>
+        <h4 class="text-warning">Parent Container</h4>
+        <p class="text-success m-5">
+            {{parentString}}
+        </p>
+        <p class="text-danger m-5">
+            Type here to send data to Child
+            <br>
+            <input type="text" [(ngModel)]="liveChanges">
+        </p>
+        <p class="text-success m-5">
+            Receive data from child
+            <br>
+            <input type="text" [value]="dataFromChild" readonly>
+        </p>
+    </div>
+    <div class="vr m-5"></div>
+    <div style="width:70%">
+        <h4 class="text-warning">Child container</h4>
+        <div class="child">
+            <app-child [inputFromParent]="parentString" [ngmodelFromParent]="liveChanges"
+                (childOutput)="receiveData($event)">
+            </app-child>
+            <app-child2 [child1Data]="dataFromChild"></app-child2>
+        </div>
+
+    </div>
+</div>
