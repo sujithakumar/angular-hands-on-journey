@@ -7,6 +7,7 @@ import { SwitchDirective } from './directives/Structural-Directives/switch-direc
 import { User } from './user/user';
 import { Parent } from './component-communication/parent/parent';
 import { LifecycleHooks } from './component-communication/lifecycle-hooks/lifecycle-hooks';
+import { Ang22 } from './component-communication/ang22/ang22';
 
 export const routes: Routes = [
 
@@ -22,6 +23,7 @@ export const routes: Routes = [
     { path: 'NgSwitch-Directive', component: SwitchDirective },
     { path: 'parent-child', component: Parent },
     { path: 'hooks', component: LifecycleHooks },
+    { path: 'ang22', component: Ang22 },
     { path: '**', component: NoPage }
 
 ];

@@ -1,0 +1,25 @@
+.container {
+  text-align: center;
+  display: block;
+}
+.container button, .container p {
+  margin: 0.25rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
+}
+.container p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.container p span {
+  color: blueviolet;
+}
+.container p span.fail {
+  color: red;
+}
+.container .noRecord {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
+}/*# sourceMappingURL=switch-directive.css.map */
