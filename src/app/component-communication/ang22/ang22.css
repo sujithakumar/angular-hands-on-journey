@@ -1,0 +1,7 @@
+.container {
+  justify-content: space-evenly;
+  padding: 15px;
+}
+.container .child .common {
+  padding: 10px;
+}/*# sourceMappingURL=ang22.css.map */

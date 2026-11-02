@@ -1,0 +1,23 @@
+<div class=" rounded-lg border p-6 m-5 shadow">
+    <h3>Child A Container</h3>
+    <div>
+        <p>
+            ParentName: <strong>{{parentname()}}</strong>
+            <br>
+            Message from Parent :
+            <br>
+            <strong>{{messageFromParent()}}</strong>
+        </p>
+    </div>
+    <br>
+    <div>
+        <button class="btn btn-success center text-center p-2" (click)="communicate()">
+            Communicate
+        </button>
+
+    </div>
+    <div>
+        Read the count from parent :
+        <strong class="text-success">{{countFromParent()}}</strong>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class=" m-5">
+    <h4 class="text-warning">Child2 Works</h4>
+    <p class="text-success">
+        {{child1Data}}
+    </p>
+    <p class="text-success">
+
+    </p>
+
+</div>
+
+<div class=" m-5">
+    <h4 class="text-warning">Child2 AS Parent</h4>
+    <p class="text-success">
+        <strong>Explaining View Child</strong>
+    </p>
+    <div>
+        <p>This is Parent block</p>
+        <p>{{ userData | json }}</p>
+        <p>Name: {{ userData?.name }}</p>
+        <p>Age: {{ userData?.age }}</p>
+    </div>
+    <div>
+        <p>This is child block</p>
+        <app-reusable #reusable></app-reusable>
+    </div>
+
+</div>

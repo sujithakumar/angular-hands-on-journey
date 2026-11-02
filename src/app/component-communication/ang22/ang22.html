@@ -1,0 +1,40 @@
+<div class="container flex gap-6 m-10">
+    <div class=" rounded-lg border p-6 m-5 shadow">
+        <h3>Parent Container</h3>
+        <div>
+            <p>
+                <br>
+                user: {{username}}
+                <br>
+                Message To Child :
+                <br>
+                <strong> {{passToChildren}}</strong>
+            </p>
+            <br>
+            <p>
+                Child Says:
+                <br>
+                {{messageFromChild}}
+            </p>
+            <p class="text-success bold">
+                Signal : Count
+                {{count()}}
+            </p>
+        </div>
+    </div>
+    <div class=" rounded-lg border shadow  p-6 m-5 child">
+        <h3>Child Container</h3>
+        <div class="container">
+            <div class="common">
+                <app-child-a [messageFromParent]="passToChildren" [parentname]="username"
+                    (respondtoParent)="readFromChild($event)" [(countFromParent)]='count'></app-child-a>
+            </div>
+
+            <div class="common">
+                <app-child-b [messageFromParent]="passToChildren" (respondtoParent)="readFromChild($event)"
+                    [(countFromParent)]='count' [parentname]="username"></app-child-b>
+            </div>
+
+        </div>
+    </div>
+</div>

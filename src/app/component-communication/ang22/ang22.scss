@@ -1,0 +1,10 @@
+.container{
+    justify-content: space-evenly;
+    padding:15px;
+    
+    .child{
+       .common{
+         padding:10px;
+       }
+    }
+}

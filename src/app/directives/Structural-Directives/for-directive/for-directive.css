@@ -1,0 +1,11 @@
+.first td {
+  color: lightseagreen;
+}
+
+.last td {
+  color: lightcoral;
+}
+
+.even td {
+  background-color: lightgray;
+}/*# sourceMappingURL=for-directive.css.map */
