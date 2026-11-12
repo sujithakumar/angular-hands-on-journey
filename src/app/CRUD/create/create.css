@@ -1,0 +1,39 @@
+label {
+  font-weight: bold;
+  font-size: large;
+  color: green;
+  padding: 3px;
+}
+
+.create-container {
+  min-height: 85vh;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+}
+.create-container .form-card {
+  max-width: 650px;
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.create-container .form-card .card-header {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+}
+.create-container .form-card .form-floating label {
+  color: #6c757d;
+}
+.create-container .form-card .form-floating .form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.create-container .form-card .form-floating .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+.create-container .form-card .btn {
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.create-container .form-card .btn:hover {
+  transform: translateY(-1px);
+}/*# sourceMappingURL=create.css.map */
