@@ -1,0 +1,42 @@
+<div class="container mt-4">
+  <!-- Back Button -->
+  <div class="mb-3">
+    <button class="btn btn-outline-secondary btn-sm" type="button" onclick="history.back()">
+      &larr; Back
+    </button>
+  </div>
+
+  <!-- Employee Details Card -->
+  <div class="card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-header bg-primary text-white py-3">
+      <h3 class="card-title mb-0">Employee Details</h3>
+    </div>
+    
+    <div class="card-body p-4">
+      <div class="mb-3 pb-2 border-bottom">
+        <span class="text-muted d-block small mb-1">Employee ID</span>
+        <span class="fs-5 fw-semibold">{{ employee().id }}</span>
+      </div>
+
+      <div class="mb-3 pb-2 border-bottom">
+        <span class="text-muted d-block small mb-1">Full Name</span>
+        <span class="fs-5 fw-semibold">{{ employee().name }}</span>
+      </div>
+
+      <div class="mb-3 pb-2 border-bottom">
+        <span class="text-muted d-block small mb-1">Username</span>
+        <span class="fs-5 fw-semibold">&#64;{{ employee().userName }}</span>
+      </div>
+
+      <div class="mb-3 pb-2 border-bottom">
+        <span class="text-muted d-block small mb-1">Email Address</span>
+        <span class="fs-5 fw-semibold">{{ employee().email }}</span>
+      </div>
+
+      <div class="mb-1">
+        <span class="text-muted d-block small mb-1">Age</span>
+        <span class="fs-5 fw-semibold">{{ employee().age }} Years</span>
+      </div>
+    </div>
+  </div>
+</div>

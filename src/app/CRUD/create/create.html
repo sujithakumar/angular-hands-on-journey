@@ -1,0 +1,99 @@
+<div class="create-container d-flex justify-content-center align-items-center py-5">
+    <div class="card form-card shadow-lg border-0 rounded-4 w-100">
+        <div class="card-header bg-gradient bg-primary text-white text-center py-4 rounded-top-4">
+            <h3 class="fw-bold mb-1">Create Employee</h3>
+            <p class="mb-0 text-white-50 fs-7">Fill in the details below to register a new employee</p>
+        </div>
+
+        <div class="card-body p-4 p-md-5">
+            <form #empCreateForm="ngForm" (ngSubmit)="submitData(empCreateForm)" novalidate>
+
+                <div class="row g-3">
+                    <!-- ID -->
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="empId" placeholder="ID" name="id"
+                                [(ngModel)]="employeeObj.id">
+                            <label for="empId">Employee ID</label>
+                        </div>
+                    </div>
+
+                    <!-- Age -->
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input type="number" min="20" max="60" class="form-control" id="empAge" placeholder="Age"
+                                name="age" [(ngModel)]="employeeObj.age" required>
+                            <label for="empAge">Age (20 - 60)</label>
+                        </div>
+                    </div>
+
+                    <!-- Name -->
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+
+                            <input type="text" class="form-control" id="empName" placeholder="Enter Name" name="name"
+                                [(ngModel)]="employeeObj.name" minlength="2" maxlength="3" #ename="ngModel" required>
+
+                            <label for="empName">Full Name</label>
+                        </div>
+                        @if(ename.invalid && (ename.dirty || ename.touched)){
+                            @if(ename.errors?.['required']){
+                            <label class="text-danger">Name is required</label>
+                            }
+                            @if(ename.errors?.['minlength']){
+                            <label class="text-danger">Enter min 2 chars</label>
+                            }
+                        }
+
+                    </div>
+
+                    <!-- User Name -->
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+
+                            <input type="text" class="form-control" id="empUserName" placeholder="Enter User Name"
+                                name="userName" [(ngModel)]="employeeObj.userName" pattern="^[a-z,A-Z]+$" minlength="2"
+                                maxlength="5" required>
+
+                            <label for="empUserName">Username</label>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+
+                            <input type="email" class="form-control" id="empEmail" placeholder="Enter Email"
+                                name="email" [(ngModel)]="employeeObj.email" email required>
+
+                            <label for="empEmail">Email Address</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex flex-wrap gap-2 justify-content-end mt-4 pt-3 border-top">
+
+                    <button type="reset" class="btn btn-outline-danger px-4 py-2" (click)="eraseData(empCreateForm)">
+                        Erase
+                    </button>
+
+                    <button type="button" class="btn btn-outline-warning px-4 py-2"
+                        (click)="setALLValues(empCreateForm)">
+                        Set All
+                    </button>
+
+                    <button type="button" class="btn btn-outline-info px-4 py-2" (click)="patchValues(empCreateForm)">
+                        Patch
+                    </button>
+
+                    <button type="submit" class="btn btn-success px-4 py-2 fw-semibold"
+                        [disabled]="!empCreateForm.valid">
+                        Create Employee
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

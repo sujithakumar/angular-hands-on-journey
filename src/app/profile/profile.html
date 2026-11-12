@@ -1,0 +1,39 @@
+<div class="container p-5">
+
+    <ul>
+        <p>Static User</p>
+        <li>
+            Name : {{user.name}}
+        </li>
+        <li>
+            Age : {{user.age}}
+        </li>
+        <li>
+            Is Married : {{user.isMarried}}
+        </li>
+    </ul>
+
+</div>
+  <h4 class="text-center">Dynamic Employee Data</h4>
+<div class="container p-5">
+  
+    <table class="table table-border">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>User Name</td>
+                <td>Mail Id</td>
+                <td>Address</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employee">
+                <td>{{emp.name}}</td>
+                <td>{{emp.username}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.address | json}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

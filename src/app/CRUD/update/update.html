@@ -1,0 +1,119 @@
+<div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center p-3 bg-light">
+    <div class="card shadow-sm border-0 rounded-3 w-100" style="max-width: 650px;">
+
+        <!-- Card Header -->
+        <div class="card-header bg-primary text-white text-center py-3 rounded-top-3">
+            <h5 class="fw-bold mb-0">Update Employee</h5>
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body p-4">
+            <form [formGroup]="reactiveForm" (ngSubmit)="submitData()">
+
+                <div class="row g-3">
+                    <!-- ID & Age -->
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="empId" formControlName="id"
+                                placeholder="ID" readonly>
+                            <label for="empId">Employee ID</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="empAge" formControlName="age"
+                                placeholder="Age">
+                            <label for="empAge">Age</label>
+                        </div>
+                    </div>
+
+                    <!-- Name & Username -->
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="empName" formControlName="name"
+                                placeholder="Name">
+                            <label for="empName">Full Name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="empUserName"
+                                formControlName="userName" placeholder="Username">
+                            <label for="empUserName">Username</label>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="empEmail"
+                                formControlName="email" placeholder="Email">
+                            <label for="empEmail">Email Address</label>
+                        </div>
+                    </div>
+
+                    <!-- Skills FormArray Section (Full Width to prevent overlap) -->
+                    <div class="col-12" formArrayName="skills">
+                        <div class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-2">
+                            <span class="text-secondary fw-bold small text-uppercase">Skills</span>
+                            <button type="button" class="btn btn-sm btn-outline-primary px-3"
+                                (click)="addSkill()">+ Add Skill</button>
+                        </div>
+
+                        <div *ngFor="let skill of skills.controls; let i = index" class="mb-2">
+                            <div [formGroupName]="i" class="input-group">
+                                <span class="input-group-text bg-light text-muted">{{ i + 1 }}</span>
+                                <input type="text" class="form-control" formControlName="skill"
+                                    placeholder="Enter skill name">
+                                <button type="button" class="btn btn-outline-danger"
+                                    (click)="deleteSkill(i)">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address Group (Full Width) -->
+                    <div class="col-12" formGroupName="address">
+                        <div class="border-bottom pb-1 mb-2">
+                            <span class="text-secondary fw-bold small text-uppercase">Address Details</span>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                            <div class="col-md-5">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="city"
+                                        formControlName="city" placeholder="City">
+                                    <label for="city">City</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="pincode"
+                                        formControlName="pincode" placeholder="Pincode">
+                                    <label for="pincode">Pincode</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex align-items-center justify-content-start ps-md-3 mt-2 mt-md-0">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="isChecked"
+                                        formControlName="isChecked">
+                                    <label class="form-check-label small fw-semibold ms-1"
+                                        for="isChecked">Verified</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
+                    <button type="reset" class="btn btn-sm btn-outline-secondary px-3"
+                        (click)="eraseData()">Erase</button>
+                    <button type="button" class="btn btn-sm btn-outline-warning px-3" (click)="setAllValues()">Set All</button>
+                    <button type="button" class="btn btn-sm btn-outline-info px-3" (click)="patchValue()">Patch</button>
+                    <button type="submit" class="btn btn-sm btn-success px-4 fw-semibold"
+                        [disabled]="!reactiveForm.valid">Update</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

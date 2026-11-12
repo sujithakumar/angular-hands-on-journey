@@ -1,0 +1,44 @@
+<div class="container text-center">
+    <button class="btn btn-success m-1 p-1" (click)="addUser()">Add New</button>
+</div>
+<div class="container p-5">
+    <table class="table table-border table-success table-striped">
+        <thead>
+            <tr>
+                <td class="col-1">Name</td>
+                <td class="col-1">User Name</td>
+                <td class="col-1">Mail Id</td>
+                <td class="col-1">Options</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- @if (employee$ | async; as employees) {
+            @for (emp of employees; track emp.id) {
+            <tr>
+                <td class="col-1">{{emp.name}}</td>
+                <td class="col-1">{{emp.age}}</td>
+                <td class="col-1">{{emp.email}}</td>
+                <td class="col-1">
+                    <button class="btn btn-primary m-1 p-1" (click)="viewData(emp.id)">View</button>
+                    <button class="btn btn-warning m-1 p-1" (click)="updateItem(emp.id)">Update</button>
+                    <button class="btn btn-danger m-1 p-1"  (click)="deleteItem(emp.id)">Delete</button>
+                </td>
+            </tr>
+            }
+            } -->
+             @for (x of emp(); track x.id) {
+            <tr>
+                <td class="col-1">{{x.name}}</td>
+                <td class="col-1">{{x.age}}</td>
+                <td class="col-1">{{x.email}}</td>
+                <td class="col-1">
+                    <button class="btn btn-primary m-1 p-1" (click)="viewData(x.id)">View</button>
+                    <button class="btn btn-warning m-1 p-1" (click)="updateItem(x.id)">Update</button>
+                    <button class="btn btn-danger m-1 p-1"  (click)="deleteItem(x.id)">Delete</button>
+                </td>
+            </tr>
+            }
+            
+        </tbody>
+    </table>
+</div>

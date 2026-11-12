@@ -1,0 +1,46 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "Sujitha",
+      "userName": "suji",
+      "email": "sujitha@gmail.com",
+      "age": 30
+    },
+    {
+      "id": 2,
+      "name": "SuryaKumar",
+      "userName": "Surya",
+      "email": "surya@gmail.com",
+      "age": 33
+    },
+    {
+      "id": 3,
+      "name": "VijayKumar",
+      "userName": "VijayIPS",
+      "email": "vijay@gmail.com",
+      "age": 50
+    },
+    {
+      "id": 5,
+      "name": "Simran",
+      "userName": "Simran",
+      "email": "Simran@gmail.com",
+      "age": 50
+    },
+    {
+      "id": 6,
+      "name": "Raghuvaran",
+      "userName": "rahu",
+      "email": "rahu@gmail.com",
+      "age": 35
+    },
+    {
+      "id": 8,
+      "name": "navdeep",
+      "userName": "nava",
+      "email": "navvv@gmail.com",
+      "age": 40
+    }
+  ]
+}
